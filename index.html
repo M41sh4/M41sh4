@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shop Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+         <a href="index.html"><img src="images/logo.png" alt="Donut Shop Logo"></a>
+            <div class="nav_links" id="navLinks">
+                <i class="fa-solid fa-xmark fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>The Sweetest Stop in Town</h1>
+            <p>Indulge in our freshly baked, hand-crafted donuts, made with love and a dash of magic every morning.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h1>Our Menu Categories</h1>
+        <p>A little something for everyone, from classics to creative seasonal flavors.</p>
+
+        <div class="menu-row">
+            <div class="menu-col">
+                <img src="images/The%20Classics.png" alt="Classic Donut">
+                <h3>The Classics</h3>
+                <p>Simple and perfect: Glazed, Chocolate, and Powdered sugar donuts.</p>
+            </div>
+            <div class="menu-col">
+                <img src="images/SpecialtyFlavors.png" alt="Specialty Donut">
+                <h3>Specialty Flavors</h3>
+                <p>Try our fan favorites: Matcha, Salted Caramel, and Red Velvet.</p>
+            </div>
+            <div class="menu-col">
+                <img src="images/SeasonalPicks.png" alt="Seasonal Donut">
+                <h3>Seasonal Picks</h3>
+                <p>Unique flavors that change with the seasons. Ask about today's special!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h1>What Our Customers Say</h1>
+        <p>The proof is in the pudding... or in this case, the donut!</p>
+
+        <div class="testimonials-row">
+            <div class="testimonial-col">
+                <img src="images/download%20(1).jpg" alt="Customer Avatar 1">
+                <div>
+                    <p>“Best donuts I've ever had! The chocolate glaze melts in your mouth, and the coffee is excellent. Highly recommend the Matcha!”</p>
+                    <h3>Christine Smith</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/download%20(2).jpg" alt="Customer Avatar 2">
+                <div>
+                    <p>“A must-visit spot. Everything is so fresh. The staff is friendly, and the unique flavors keep me coming back every week.”</p>
+                    <h3>David Wilson</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h1>Ready to Place Your Order?</h1>
+        <a href="#" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are dedicated to baking the finest donuts and spreading joy, one sweet treat at a time.</p>
+        </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

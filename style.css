@@ -1,0 +1,504 @@
+/*
+=====================================
+    GOOGLE FONTS & GLOBAL RESET
+=====================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+/*
+=====================================
+    HEADER / HERO SECTION (Homepage)
+=====================================
+*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    /* Background Image with Dark Overlay (using your Donut Splash.jpg) */
+    background-image: linear-gradient(
+    rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url('images/Donut Splash.jpg'); 
+    background-position: center;
+    background-size: cover; 
+    position: relative;
+}
+
+/*
+=====================================
+    NAVIGATION BAR
+=====================================
+*/
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 2% 6%;
+    align-items: center; 
+}
+
+nav img {
+    width: 150px; 
+}
+
+.nav_links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav_links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative; 
+}
+
+.nav_links ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Underline hover effect */
+.nav_links ul li::after {
+    content: '';
+    width: 0%; 
+    height: 2px; 
+    background: #ff99b6; /* Pink accent color */
+    display: block;
+    margin: auto;
+    transition: 0.5s; 
+}
+
+.nav_links ul li:hover::after {
+    width: 100%;
+}
+
+/* Hide mobile menu icons by default on desktop */
+nav .fa-bars, .nav_links .fa-times {
+    display: none;
+}
+
+/*
+=====================================
+    HEADER TEXT BOX (Homepage)
+=====================================
+*/
+.text-box {
+    width: 90%;
+    color: #ffffff;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p { 
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s; /* Added transition for hover effect */
+}
+
+.hero-btn:hover {
+    border: 1px solid #ff99b6;
+    background: #ff99b6;
+}
+
+/* Pink Button variant for content sections */
+.pink-btn {
+    border: 1px solid #ff99b6;
+    color: #ff99b6;
+}
+
+.pink-btn:hover {
+    color: #fff;
+    background: #ff99b6;
+}
+
+/*
+=====================================
+    INNER PAGE HEADER STYLES (.sub-header)
+=====================================
+*/
+.sub-header {
+    height: 50vh; 
+    width: 100%;
+    background-image: linear-gradient(
+    rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url('images/Donut Menu Banner.png'); /* Default Inner Banner */
+    background-position: center;
+    background-size: cover; 
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+/* Specific inner banners */
+.about-sub-header {
+    background-image: linear-gradient(
+    rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url('images/About Us Banner.png'); 
+}
+
+.contact-sub-header {
+    background-image: linear-gradient(
+    rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url('images/Contact Banner.png'); 
+}
+
+.sub-header h1 {
+    color: #fff;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+/*
+=====================================
+    MENU SECTION (Used for 3-col layouts)
+=====================================
+*/
+.menu {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.menu-row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-col {
+    flex-basis: 31%; /* For 3 columns */
+    background: #fff3f3; /* Light red/pink background */
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.menu-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.menu-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*
+=====================================
+    ABOUT US CONTENT SECTION (2-col Layout)
+=====================================
+*/
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%; /* For 2 columns */
+    padding: 30px 2px;
+}
+
+.about-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-col h1 {
+    padding-top: 0;
+    font-size: 30px;
+}
+
+.about-col p {
+    color: #777;
+    padding: 15px 0 25px 0; 
+}
+
+
+/*
+=====================================
+    TESTIMONIALS SECTION
+=====================================
+*/
+.testimonials {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.testimonials-row {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.testimonial-col {
+    flex-basis: 44%; /* For 2 columns */
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3; 
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+}
+
+.testimonial-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.testimonial-col p {
+    padding: 0;
+}
+
+.testimonial-col h3 {
+    margin-top: 15px; 
+    text-align: left;
+}
+
+.testimonial-col .fa-solid, 
+.testimonial-col .fa-regular {
+    color: #ff99b6; /* Pink accent color for stars */
+}
+
+/*
+=====================================
+    CALL TO ACTION (CTA) SECTION
+=====================================
+*/
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Chef.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*
+=====================================
+    CONTACT US SECTION (Map and Form)
+=====================================
+*/
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.contact-us {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.contact-col {
+    flex-basis: 48%; 
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa-solid {
+    font-size: 28px;
+    color: #ff99b6; 
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+    margin: 0;
+    color: #777;
+}
+
+.contact-col div h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col form input,
+.contact-col form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    border-radius: 5px;
+}
+
+/*
+=====================================
+    FOOTER SECTION
+=====================================
+*/
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa-solid {
+    color: #ff99b6; 
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/*
+=====================================
+    MEDIA QUERIES (MOBILE STYLES)
+=====================================
+*/
+@media(max-width: 700px){
+
+    /* Header Text Adjustment */
+    .text-box h1{
+        font-size: 32px;
+    }
+    
+    /* Mobile Menu Icons */
+    nav .fa-bars { 
+        display: block; 
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav_links .fa-times { 
+        display: block; 
+        color: #000; 
+        padding: 20px;
+    }
+
+    /* Mobile Menu Container */
+    .nav_links {
+        position: absolute;
+        background: #ff99b6; /* Pink background for the mobile menu */
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /* Initially hidden */
+        text-align: left;
+        z-index: 2;
+        transition: 1s; /* Smooth slide-in/out */
+    }
+    
+    /* Makes menu links vertical */
+    .nav_links ul li { 
+        display: block; 
+    }
+
+    .nav_links ul {
+        padding: 30px;
+    }
+
+    /* Column Stacking for all sections */
+    .row {
+        flex-direction: column;
+    }
+    
+    .menu-col, 
+    .testimonial-col,
+    .about-col,
+    .contact-col {
+        flex-basis: auto; 
+        margin-bottom: 30px;
+    }
+
+    /* CTA Heading Adjustment */
+    .cta h1 { 
+        font-size: 24px; 
+    }
+    
+    /* Testimonial Image Alignment */
+    .testimonial-col img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}

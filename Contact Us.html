@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shop - Contact Us</title>
+    <!-- Links to your existing style.css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. SUB-HEADER SECTION (Uses the inner page style) -->
+    <section class="sub-header contact-sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="Donut Shop Logo"></a>
+            <div class="nav_links" id="navLinks">
+                <i class="fa-solid fa-xmark fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <h1>Contact Us</h1>
+    </section>
+
+    
+    <!-- 2. LOCATION MAP SECTION -->
+    <section class="location">
+        <!-- This is a placeholder for an embedded Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.257321683973!2d-122.41941558468165!3d37.77492927975936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858087961b17e5%3A0x6b12a8385202868c!2sFerry%20Building%20Marketplace!5e0!3m2!1sen!2sus!4v1628109062345!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    
+    <!-- 3. CONTACT FORM AND INFO SECTION -->
+    <section class="contact-us">
+        
+        <div class="row">
+            <!-- Contact Details Column -->
+            <div class="contact-col">
+                <div>
+                    <i class="fa-solid fa-home"></i>
+                    <span>
+                        <h5>456 Donut Alley, Suite 101</h5>
+                        <p>San Francisco, CA 94111, USA</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <h5>+1 012 345 6789</h5>
+                        <p>Monday to Saturday, 8am to 5pm</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        <h5>hello@donuts.com</h5>
+                        <p>Email us your query</p>
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Contact Form Column -->
+            <div class="contact-col">
+                
+                <form action="mailto:hello@donuts.com" method="post" enctype="text/plain">
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter email address" required>
+                    <input type="text" name="Subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="Message" placeholder="Message" required></textarea>
+                    
+                    <!-- We reuse the hero-btn style -->
+                    <button type="submit" class="hero-btn pink-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <!-- 4. FOOTER SECTION (Kept the same) -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are dedicated to baking the finest donuts and spreading joy, one sweet treat at a time.</p>
+    </section>
+
+    <!-- JAVASCRIPT FOR MOBILE MENU TOGGLE -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>
