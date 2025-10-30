@@ -1,0 +1,591 @@
+/* --- GLOBAL STYLING & SMOOTH SCROLL --- */
+html {
+    /* Membuat efek scroll halus ketika klik anchor link */
+    scroll-behavior: smooth; 
+}
+
+/* --- PALET WARNA --- */
+:root {
+    --primary-color: #034f77; /* Biru Tua */
+    --accent-color: #FFC300; /* Kuning */
+    --text-light: #ffffff; 
+    --text-dark: #1A1A1A; 
+    --bg-light: #FAF0E6; /* Krem Muda */
+    --text-paragraph: #555555; 
+}
+
+/* --- GLOBAL RESET DAN STYLING DASAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- HEADER / NAVBAR STYLING --- */
+.navbar {
+    background-color: var(--text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img {
+    height: 35px; 
+    margin-right: 10px; 
+}
+
+.nav-links a {
+    margin-left: 20px;
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- DROPDOWN NAV BAR STYLING (Untuk Menu Edukasi) --- */
+.dropdown-menu {
+    float: left;
+    overflow: hidden;
+    margin-left: 20px; 
+}
+
+.dropdown-menu .dropbtn {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: var(--text-dark);
+    padding: 0 0;
+    background-color: inherit;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.dropbtn:hover {
+    color: var(--accent-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--text-light);
+    min-width: 160px;
+    box-shadow: 0 px 8px 16px 0 px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px; 
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--text-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: 0; 
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light); 
+    color: var(--primary-color);
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
+
+/* --- HERO SECTION STYLING --- */
+.hero-section {
+    position: relative;
+    height: 700px; 
+    background-image: url('images/hero-inklusifa.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 10; 
+    color: var(--text-light);
+    max-width: 750px; 
+    text-align: left; 
+}
+
+.hero-title {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--text-light); 
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px; 
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- LAYANAN SECTION (Course) - SATU CARD --- */
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0 0; 
+}
+
+.course h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.course p {
+    color: var(--text-paragraph);
+    font-size: 14px;
+    line-height: 22px;
+    padding: 10px;
+    margin-bottom: 40px; 
+}
+
+.modern-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    gap: 20px; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.single-card-layout {
+    justify-content: center; 
+}
+
+.modern-card {
+    flex-basis: 450px; 
+    max-width: 50%; 
+    background: var(--text-light); 
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; 
+    border-top: 5px solid var(--accent-color); 
+}
+
+.modern-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px);
+}
+
+.modern-card h3 {
+    text-align: left; 
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color); 
+}
+
+.modern-card p {
+    padding: 0;
+    color: var(--text-paragraph);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* --- INTERACTIVE GALLERY STYLING (4 Kotak Hover) --- */
+.service-gallery {
+    padding: 20px 0 80px 0; 
+    background-color: var(--bg-light); 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 350px; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.gallery-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 79, 119, 0.85); 
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 25px;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+
+.gallery-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.gallery-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0; 
+}
+
+.read-more-btn {
+    color: var(--accent-color); 
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: underline;
+    align-self: flex-start; 
+}
+
+/* HOVER EFFECT */
+.gallery-item:hover img {
+    transform: scale(1.1); 
+}
+
+.gallery-item:hover .gallery-content {
+    opacity: 1; 
+}
+
+/* --- SECTION: APA ITU ABK? STYLING --- */
+.apa-itu-abk-section {
+    background-color: var(--bg-light); 
+    padding: 100px 0;
+}
+
+.abk-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.abk-content .text-column {
+    flex-basis: 55%;
+}
+
+.abk-content .image-column {
+    flex-basis: 45%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.abk-content .text-column h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--primary-color); 
+    margin-bottom: 20px;
+}
+
+.abk-content .text-column p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-paragraph);
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.abk-quote {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent-color) !important; 
+    margin-top: 20px;
+    display: block;
+}
+
+/* --- WHY IMPORTANT SECTION STYLING (Kotak 2 Kolom) --- */
+.why-important {
+    background-color: var(--text-light); 
+    padding: 80px 0;
+    width: 100%;
+}
+
+.importance-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.text-column {
+    flex-basis: 50%;
+}
+
+.text-column h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--primary-color); 
+    margin-bottom: 20px;
+}
+
+.text-column p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-paragraph);
+    margin-bottom: 15px;
+    padding: 0; 
+}
+
+.image-column {
+    flex-basis: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-column img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* --- ADDITIONAL TEXT BOX STYLING --- */
+.additional-text-box {
+    background-color: var(--primary-color); 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.additional-text-box h2 {
+    color: var(--accent-color); 
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.additional-text-box p {
+    color: var(--text-light); 
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* --- FOOTER STYLING --- */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: var(--bg-light); 
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.icons .fa {
+    color: var(--accent-color);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart-o {
+    color: var(--accent-color);
+}
+
+/* --- SUB-HEADER TENTANG KAMI STYLING (Untuk tentang_kami.html) --- */
+.sub-header-tentang-kami {
+    position: relative;
+    height: 300px; 
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('images/hero-inklusifa.jpg');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header-content h1 {
+    font-size: 36px;
+    color: var(--text-light);
+}
+
+/* --- TENTANG KAMI CONTENT STYLING (Untuk tentang_kami.html) --- */
+.tentang-kami-content {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.tentang-col h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* Tombol Explore Now pada halaman Tentang Kami */
+.explore-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.explore-btn:hover {
+    color: var(--text-light);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* --- MEDIA QUERY UNTUK RESPONSIVITAS MOBILE --- */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar dan Hero */
+    .hero-section {
+        height: 500px;
+    }
+    .hero-content {
+        text-align: center;
+        max-width: 90%;
+    }
+    .hero-title {
+        font-size: 40px;
+    }
+
+    /* Navbar Dropdown Mobile */
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+    }
+    .nav-links a, .dropdown-menu {
+        margin-left: 10px; 
+        margin-right: 10px;
+        float: none;
+        display: inline-block;
+    }
+    
+    /* Layanan (Card) */
+    .modern-card {
+        max-width: 100%; 
+    }
+    
+    /* Galeri 1 kolom di Mobile */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Why Important dan ABK Section: Kolom menjadi Stack */
+    .importance-content, .abk-content {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .importance-content .text-column {
+        padding-top: 20px;
+    }
+
+    .abk-content .text-column {
+        order: 2;
+    }
+    .abk-content .image-column {
+        order: 1;
+    }
+
+    .text-column h2 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    
+    /* Additional Text Box */
+    .additional-text-box h2 {
+        font-size: 24px;
+    }
+
+    /* Tentang Kami Sub-Header */
+    .sub-header-tentang-kami {
+        height: 200px;
+    }
+    .sub-header-content h1 {
+        font-size: 30px;
+    }
+    .tentang-col h2 {
+        font-size: 24px;
+    }
+    /* --- CSS untuk Halaman Apa Itu Abk --- */
+}
